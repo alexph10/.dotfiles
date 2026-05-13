@@ -5,6 +5,7 @@
 {{- $useSigning  := promptBoolOnce  . "useSigning" "Enable git commit signing?" false -}}
 {{- $installFonts := promptBoolOnce . "installFonts" "Install Nerd Fonts during bootstrap?" true -}}
 {{- $installLangs := promptBoolOnce . "installLanguages" "Install language toolchains (node, python, go, rust) via mise?" true -}}
+{{- $autoPreCommit := promptBoolOnce . "autoPreCommit" "Auto-install pre-commit hook in every new git repo (init.templateDir)?" true -}}
 
 encryption = "age"
 
@@ -16,6 +17,7 @@ encryption = "age"
     useSigning       = {{ $useSigning }}
     installFonts     = {{ $installFonts }}
     installLanguages = {{ $installLangs }}
+    autoPreCommit    = {{ $autoPreCommit }}
 
 [diff]
     pager = "delta"

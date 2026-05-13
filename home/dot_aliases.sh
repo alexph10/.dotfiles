@@ -70,3 +70,16 @@ if command -v chezmoi >/dev/null 2>&1; then
     alias dotup='chezmoi update --apply'
     alias dotcd='chezmoi cd'
 fi
+
+if command -v just >/dev/null 2>&1; then
+    alias j='just'
+    alias jl='just --list'
+fi
+
+if command -v glow >/dev/null 2>&1; then
+    alias md='glow -p'
+fi
+
+if command -v az >/dev/null 2>&1; then
+    alias azwhoami='az account show --query "{name:user.name, subscription:name, tenant:tenantId}" -o table'
+fi

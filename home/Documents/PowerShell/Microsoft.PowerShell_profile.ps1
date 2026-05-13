@@ -65,6 +65,14 @@ if (Get-Command mise -ErrorAction SilentlyContinue) {
     mise activate pwsh | Out-String | Invoke-Expression
 }
 
+if (Get-Command direnv -ErrorAction SilentlyContinue) {
+    Invoke-Expression "$(direnv hook pwsh)"
+}
+
+if (Get-Command atuin -ErrorAction SilentlyContinue) {
+    atuin init powershell | Out-String | Invoke-Expression
+}
+
 if (Get-Command gh -ErrorAction SilentlyContinue) {
     gh completion -s powershell | Out-String | Invoke-Expression
 }

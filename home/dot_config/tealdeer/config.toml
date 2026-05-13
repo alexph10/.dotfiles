@@ -1,0 +1,29 @@
+# tealdeer — fast `tldr` client. Cache auto-updates weekly.
+
+[display]
+compact = false
+use_pager = false
+
+[style.command_name]
+foreground = "cyan"
+bold = true
+
+[style.example_text]
+foreground = "white"
+
+[style.example_code]
+foreground = "green"
+
+[style.example_variable]
+foreground = "yellow"
+underline = true
+
+[style.description]
+foreground = "white"
+
+[updates]
+auto_update = true
+auto_update_interval_hours = 168
+
+[directories]
+custom_pages_dir = "~/.local/share/tldr-custom"

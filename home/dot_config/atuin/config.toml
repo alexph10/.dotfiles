@@ -1,0 +1,41 @@
+# atuin — magical shell history. Offline by default. Run `atuin register` /
+# `atuin login` + `atuin sync` only if you want cross-machine sync.
+
+# History UI: full-screen fuzzy picker on Ctrl+R / up-arrow.
+search_mode      = "fuzzy"
+filter_mode      = "global"
+filter_mode_shell_up_key_binding = "session"
+style            = "compact"
+show_preview     = true
+show_help        = true
+exit_mode        = "return-original"
+inline_height    = 0
+invert           = false
+auto_hide_height = 8
+
+# Sync (off by default; enable by `atuin login` to a server you trust).
+auto_sync   = false
+sync_frequency = "10m"
+
+# Hide common noise from history.
+history_filter = [
+    "^secret-",
+    "^export AWS_",
+    "^export AZURE_",
+    "^export OPENAI_",
+    "^op signin",
+    "^op run --no-masking",
+    " --token=",
+    " --password=",
+]
+
+# Don't store commands starting with a space.
+secrets_filter = true
+
+# Take over arrow-up key in addition to Ctrl+R.
+enter_accept       = true
+keymap_mode        = "auto"
+keymap_cursor      = { vim_insert = "blink-block", vim_normal = "steady-block" }
+
+# Dialect for relative dates in the UI.
+dialect = "us"

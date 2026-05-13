@@ -26,3 +26,9 @@ btop
 neovim
 shellcheck
 shfmt
+direnv
+just
+tealdeer
+pre-commit
+# gitleaks, atuin, glow, azure-cli are typically installed via their own
+# install scripts or cargo on Debian/Ubuntu; see scripts/install-packages.sh.

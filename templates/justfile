@@ -1,0 +1,34 @@
+# Starter justfile. Copy into a new repo as `justfile` (no extension) at the root.
+# Run `just` (no args) or `just <recipe>`. List recipes: `just --list`.
+
+set shell        := ["bash", "-cu"]
+set windows-shell := ["pwsh.exe", "-NoLogo", "-NoProfile", "-Command"]
+set positional-arguments := true
+set dotenv-load  := true
+
+default:
+    @just --list
+
+# Install dependencies (override per-project).
+install:
+    @echo "Override 'install' in your project's justfile."
+
+# Run the project's test suite.
+test:
+    @echo "Override 'test'."
+
+# Run the formatter(s). Falls back to pre-commit's formatters.
+fmt:
+    @if [ -f .pre-commit-config.yaml ]; then pre-commit run --all-files; else echo "Override 'fmt'."; fi
+
+# Lint.
+lint:
+    @if [ -f .pre-commit-config.yaml ]; then pre-commit run --all-files; else echo "Override 'lint'."; fi
+
+# Run pre-commit on staged files (use as a git hook substitute).
+check:
+    pre-commit run
+
+# Bump pre-commit hook versions.
+update-hooks:
+    pre-commit autoupdate

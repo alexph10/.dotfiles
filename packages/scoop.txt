@@ -22,6 +22,14 @@ main/mise
 main/neovim
 main/uv
 main/chezmoi
+main/direnv
+main/just
+main/tealdeer
+main/gitleaks
+main/atuin
+main/glow
+main/pre-commit
+main/azure-cli
 
 extras/wezterm
 extras/vscode

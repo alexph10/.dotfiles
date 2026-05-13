@@ -8,6 +8,9 @@
 
 [init]
     defaultBranch = main
+{{- if .autoPreCommit }}
+    templateDir = ~/.git-template
+{{- end }}
 
 [core]
     editor      = nvim

@@ -1,0 +1,63 @@
+# Global direnv helpers. Sourced once when direnv loads any .envrc.
+# Add per-project .envrc files at the repo root and run `direnv allow`.
+
+# Reduce noise: only log when something changed substantively.
+export DIRENV_LOG_FORMAT=""
+
+# layout_uv [PY_VERSION]
+# Creates / activates a uv-managed venv at .venv in the project root.
+# Usage in a project's .envrc:
+#     use uv 3.12
+layout_uv() {
+    local python_version="${1:-3.12}"
+    if ! has uv; then
+        log_error "uv is not installed; install it via 'mise use -g uv' or 'pipx install uv'."
+        return 1
+    fi
+    if [[ ! -d .venv ]]; then
+        uv venv --python "$python_version" .venv
+    fi
+    # shellcheck disable=SC1091
+    source .venv/bin/activate 2>/dev/null || source .venv/Scripts/activate
+    PATH_add .venv/bin
+    PATH_add .venv/Scripts
+}
+
+# use_uv = alias for layout_uv (matches direnv's `use <stdlib>` convention).
+use_uv() { layout_uv "$@"; }
+
+# use mise: when .tool-versions or .mise.toml is present, let mise handle it.
+# Just call `use mise` in your .envrc; this picks up its activation block.
+use_mise() {
+    if has mise; then
+        eval "$(mise direnv activate)"
+    else
+        log_error "mise is not installed."
+        return 1
+    fi
+}
+
+# layout_node
+# Adds ./node_modules/.bin to PATH so pnpm/npm-installed CLIs Just Work.
+layout_node() {
+    PATH_add node_modules/.bin
+}
+
+# dotenv with allow-list of file names; safer than blanket `dotenv`.
+dotenv_if_exists() {
+    for f in "$@"; do
+        if [[ -f "$f" ]]; then
+            dotenv "$f"
+        fi
+    done
+}
+
+# strict_env: fail fast if a required variable isn't set.
+strict_env() {
+    for var in "$@"; do
+        if [[ -z "${!var:-}" ]]; then
+            log_error "Missing required env var: $var"
+            return 1
+        fi
+    done
+}

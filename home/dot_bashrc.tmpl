@@ -32,6 +32,14 @@ if command -v zoxide >/dev/null 2>&1; then
     eval "$(zoxide init bash --cmd cd)"
 fi
 
+if command -v direnv >/dev/null 2>&1; then
+    eval "$(direnv hook bash)"
+fi
+
+if command -v atuin >/dev/null 2>&1; then
+    eval "$(atuin init bash)"
+fi
+
 if command -v fzf >/dev/null 2>&1; then
     if [ -f "$HOME/.fzf.bash" ]; then
         source "$HOME/.fzf.bash"

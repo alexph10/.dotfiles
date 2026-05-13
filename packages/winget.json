@@ -48,7 +48,15 @@
                 { "PackageIdentifier": "DEVCOM.JetBrainsMonoNerdFont" },
 
                 { "PackageIdentifier": "twpayne.chezmoi" },
-                { "PackageIdentifier": "AgileBits.1Password.CLI" }
+                { "PackageIdentifier": "AgileBits.1Password.CLI" },
+
+                { "PackageIdentifier": "direnv.direnv" },
+                { "PackageIdentifier": "Casey.Just" },
+                { "PackageIdentifier": "dbrgn.tealdeer" },
+                { "PackageIdentifier": "gitleaks.gitleaks" },
+                { "PackageIdentifier": "ellie.atuin" },
+                { "PackageIdentifier": "charmbracelet.glow" },
+                { "PackageIdentifier": "Microsoft.AzureCLI" }
             ]
         }
     ],

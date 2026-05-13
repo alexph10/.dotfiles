@@ -30,6 +30,16 @@ zsh-autosuggestions
 zsh-syntax-highlighting
 wezterm
 
+# Productivity / quality / cloud
+direnv
+just
+tealdeer
+pre-commit
+gitleaks
+atuin
+glow
+azure-cli
+
 # Languages (mostly handled by mise, but bootstrap shims)
 node
 python@3.12

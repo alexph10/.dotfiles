@@ -66,3 +66,17 @@ if (Get-Command rg -ErrorAction SilentlyContinue) {
 
 function reload-profile { . $PROFILE }
 function edit-profile    { & $env:EDITOR (Split-Path -Parent $PROFILE) }
+
+if (Get-Command tldr -ErrorAction SilentlyContinue) {
+    function help-cmd { param([Parameter(Mandatory)] [string] $name) tldr $name }
+}
+if (Get-Command just -ErrorAction SilentlyContinue) {
+    Set-Alias -Name j -Value just
+    function jl { just --list }
+}
+if (Get-Command glow -ErrorAction SilentlyContinue) {
+    function md { param([Parameter(Mandatory)] [string] $path) glow -p $path }
+}
+if (Get-Command az -ErrorAction SilentlyContinue) {
+    function azwhoami { az account show --query '{name:user.name, subscription:name, tenant:tenantId}' -o table }
+}
