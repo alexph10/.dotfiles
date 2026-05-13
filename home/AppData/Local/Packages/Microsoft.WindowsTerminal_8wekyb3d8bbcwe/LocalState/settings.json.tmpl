@@ -1,0 +1,128 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "alwaysShowTabs": true,
+    "centerOnLaunch": false,
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "initialCols": 140,
+    "initialRows": 38,
+    "launchMode": "default",
+    "showTabsInTitlebar": true,
+    "showTerminalTitleInTitlebar": true,
+    "snapToGridOnResize": true,
+    "tabSwitcherMode": "mru",
+    "tabWidthMode": "equal",
+    "theme": "Tokyo Night",
+    "useAcrylicInTabRow": true,
+    "windowingBehavior": "useAnyExisting",
+    "profiles": {
+        "defaults": {
+            "antialiasingMode": "cleartype",
+            "closeOnExit": "graceful",
+            "colorScheme": "Tokyo Night",
+            "cursorShape": "bar",
+            "font": {
+                "face": "JetBrainsMono Nerd Font",
+                "size": 11,
+                "weight": "normal"
+            },
+            "opacity": 92,
+            "padding": "10",
+            "scrollbarState": "hidden",
+            "snapOnInput": true,
+            "useAcrylic": true
+        },
+        "list": [
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore",
+                "commandline": "pwsh.exe -NoLogo",
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "Command Prompt",
+                "commandline": "cmd.exe",
+                "hidden": false,
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "name": "Ubuntu (WSL)",
+                "source": "Windows.Terminal.Wsl",
+                "hidden": false
+            },
+            {
+                "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+                "name": "Git Bash",
+                "commandline": "%PROGRAMFILES%\\Git\\bin\\bash.exe -li",
+                "icon": "%PROGRAMFILES%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "hidden": false,
+                "startingDirectory": "%USERPROFILE%"
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Tokyo Night",
+            "background": "#1A1B26",
+            "foreground": "#A9B1D6",
+            "cursorColor": "#C0CAF5",
+            "selectionBackground": "#33467C",
+            "black":         "#15161E",
+            "blue":          "#7AA2F7",
+            "cyan":          "#7DCFFF",
+            "green":         "#9ECE6A",
+            "purple":        "#BB9AF7",
+            "red":           "#F7768E",
+            "white":         "#A9B1D6",
+            "yellow":        "#E0AF68",
+            "brightBlack":   "#414868",
+            "brightBlue":    "#7AA2F7",
+            "brightCyan":    "#7DCFFF",
+            "brightGreen":   "#9ECE6A",
+            "brightPurple":  "#BB9AF7",
+            "brightRed":     "#F7768E",
+            "brightWhite":   "#C0CAF5",
+            "brightYellow":  "#E0AF68"
+        }
+    ],
+    "themes": [
+        {
+            "name": "Tokyo Night",
+            "tab": {
+                "background": "#1A1B26FF",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow": {
+                "background": "#15161EFF",
+                "unfocusedBackground": "#15161EFF"
+            },
+            "window": {
+                "applicationTheme": "dark",
+                "useMica": true
+            }
+        }
+    ],
+    "actions": [
+        { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+        { "command": "paste", "keys": "ctrl+v" },
+        { "command": "find", "keys": "ctrl+shift+f" },
+        { "command": { "action": "splitPane", "split": "right",  "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+        { "command": { "action": "splitPane", "split": "down",   "splitMode": "duplicate" }, "keys": "alt+shift+e" },
+        { "command": { "action": "newTab" }, "keys": "ctrl+t" },
+        { "command": "closeTab", "keys": "ctrl+w" },
+        { "command": { "action": "nextTab" },     "keys": "ctrl+tab" },
+        { "command": { "action": "prevTab" },     "keys": "ctrl+shift+tab" },
+        { "command": "commandPalette",            "keys": "ctrl+shift+p" },
+        { "command": { "action": "moveFocus", "direction": "left"  }, "keys": "alt+left" },
+        { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+right" },
+        { "command": { "action": "moveFocus", "direction": "up"    }, "keys": "alt+up" },
+        { "command": { "action": "moveFocus", "direction": "down"  }, "keys": "alt+down" }
+    ]
+}

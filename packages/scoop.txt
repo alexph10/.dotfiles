@@ -1,0 +1,31 @@
+# Buckets: main, extras, nerd-fonts
+# scoop bucket add extras
+# scoop bucket add nerd-fonts
+
+main/git
+main/gh
+main/lazygit
+main/delta
+main/fzf
+main/ripgrep
+main/bat
+main/fd
+main/eza
+main/zoxide
+main/jq
+main/yq
+main/hyperfine
+main/dust
+main/btop
+main/oh-my-posh
+main/mise
+main/neovim
+main/uv
+main/chezmoi
+
+extras/wezterm
+extras/vscode
+extras/powertoys
+extras/windows-terminal
+
+nerd-fonts/JetBrainsMono-NF

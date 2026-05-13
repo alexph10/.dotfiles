@@ -1,0 +1,139 @@
+{
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono', Consolas, monospace",
+    "editor.fontSize": 13,
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 1.55,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [100, 120],
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "editor.suggestSelection": "first",
+    "editor.inlineSuggest.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.linkedEditing": true,
+    "editor.wordWrap": "off",
+    "editor.semanticHighlighting.enabled": true,
+
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.eol": "\n",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/node_modules": true,
+        "**/.venv": true,
+        "**/__pycache__": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/node_modules/**": true,
+        "**/.venv/**": true,
+        "**/target/**": true,
+        "**/dist/**": true
+    },
+
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 12,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.list.smoothScrolling": true,
+    "workbench.startupEditor": "none",
+    "workbench.tree.indent": 16,
+
+    "window.title": "${activeEditorMedium}${separator}${rootName}",
+    "window.commandCenter": true,
+    "window.menuBarVisibility": "compact",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 0,
+
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono', Consolas, monospace",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.copyOnSelection": false,
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.scrollback": 50000,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": { "source": "PowerShell", "icon": "terminal-powershell" },
+        "Git Bash":   { "source": "Git Bash" }
+    },
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false,
+    "explorer.sortOrder": "type",
+
+    "search.useIgnoreFiles": true,
+    "search.smartCase": true,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/.venv": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/target": true,
+        "**/.next": true,
+        "**/.turbo": true
+    },
+
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.pruneOnFetch": true,
+    "git.rebaseWhenSync": true,
+    "git.suggestSmartCommit": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "scm.defaultViewMode": "tree",
+
+    "telemetry.telemetryLevel": "off",
+    "redhat.telemetry.enabled": false,
+
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": { "source.fixAll": "explicit", "source.organizeImports": "explicit" }
+    },
+    "[typescript]":      { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[javascript]":      { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[json]":            { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[jsonc]":           { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[markdown]":        { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.wordWrap": "on", "editor.quickSuggestions": { "comments": "off", "strings": "off", "other": "off" } },
+    "[rust]":            { "editor.defaultFormatter": "rust-lang.rust-analyzer" },
+    "[go]":              { "editor.defaultFormatter": "golang.go" },
+
+    "prettier.singleQuote": true,
+    "prettier.semi": true,
+    "prettier.printWidth": 100,
+    "prettier.trailingComma": "all",
+
+    "cursor.cpp.disabledLanguages": ["plaintext"],
+    "cursor.general.enableShadowWorkspace": true,
+    "cursor.diffs.useCharacterLevelDiffs": true
+}

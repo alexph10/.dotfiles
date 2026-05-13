@@ -1,0 +1,32 @@
+# Global mise configuration
+# Per-project versions live in `.tool-versions` or `.mise.toml` at the project root.
+
+[tools]
+node   = "lts"
+python = "3.12"
+go     = "latest"
+rust   = "stable"
+
+[settings]
+experimental         = true
+legacy_version_file  = true
+plugin_autoupdate_last_check_duration = "168h"
+not_found_auto_install = true
+jobs = 4
+verbose = false
+disable_default_shorthands = false
+
+[settings.status]
+missing_tools = "if_other_versions_installed"
+show_env      = false
+show_tools    = false
+
+[env]
+PYTHONDONTWRITEBYTECODE = "1"
+PIP_REQUIRE_VIRTUALENV  = "true"
+NODE_OPTIONS            = "--enable-source-maps"
+RUST_BACKTRACE          = "1"
+COREPACK_ENABLE_AUTO_PIN = "0"
+
+[hooks]
+postinstall = "corepack enable >/dev/null 2>&1 || true"

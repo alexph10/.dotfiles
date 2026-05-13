@@ -1,0 +1,58 @@
+gui:
+    theme:
+        activeBorderColor: ["#7aa2f7", "bold"]
+        inactiveBorderColor: ["#414868"]
+        selectedLineBgColor: ["#283457"]
+        cherryPickedCommitBgColor: ["#bb9af7"]
+        cherryPickedCommitFgColor: ["#1a1b26"]
+        unstagedChangesColor: ["red"]
+    showFileTree: true
+    showIcons: true
+    nerdFontsVersion: "3"
+    expandFocusedSidePanel: true
+    mouseEvents: true
+    skipDiscardChangeWarning: false
+    skipStashWarning: false
+    showCommandLog: false
+    commitLength:
+        show: true
+
+git:
+    paging:
+        colorArg: always
+        pager: delta --paging=never --side-by-side
+    commit:
+        signOff: false
+    merging:
+        manualCommit: false
+        args: ""
+    autoFetch: true
+    autoRefresh: true
+    fetchAll: true
+    branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --"
+    overrideGpg: false
+    parseEmoji: true
+    log:
+        order: topo-order
+        showGraph: always
+
+os:
+    editPreset: "nvim"
+    edit: "nvim {{filename}}"
+    editAtLine: "nvim +{{line}} {{filename}}"
+    editAtLineAndWait: "nvim +{{line}} {{filename}}"
+
+update:
+    method: prompt
+    days: 14
+
+confirmOnQuit: false
+disableStartupPopups: true
+notARepository: "prompt"
+promptToReturnFromSubprocess: false
+
+keybinding:
+    universal:
+        quit: "q"
+        return: "<esc>"
+        togglePanel: "<tab>"

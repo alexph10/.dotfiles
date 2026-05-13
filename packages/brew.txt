@@ -1,0 +1,39 @@
+# Homebrew bundle-style list. Apply with `brew install $(grep -v '^#' brew.txt | tr '\n' ' ')`
+# or convert to a Brewfile for `brew bundle`.
+
+# CLI essentials
+git
+gh
+git-lfs
+lazygit
+git-delta
+fzf
+ripgrep
+bat
+fd
+eza
+zoxide
+jq
+yq
+hyperfine
+dust
+btop
+oh-my-posh
+mise
+neovim
+uv
+chezmoi
+
+# Shell / terminal
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+wezterm
+
+# Languages (mostly handled by mise, but bootstrap shims)
+node
+python@3.12
+go
+
+# Fonts (via brew cask)
+# brew install --cask font-jetbrains-mono-nerd-font

@@ -1,0 +1,12 @@
+git_protocol: ssh
+editor: nvim
+prompt: enabled
+pager: delta
+aliases:
+    co: pr checkout
+    pv: pr view --web
+    bv: browse
+    prs: pr list --author "@me"
+    rev: pr review
+    ci: run watch
+prefer_editor_prompt: enabled

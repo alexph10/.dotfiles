@@ -1,0 +1,37 @@
+{
+    "startup_action": "User",
+    "enabled": {
+        "AdvancedPaste": true,
+        "AlwaysOnTop": true,
+        "Awake": true,
+        "ColorPicker": true,
+        "FancyZones": true,
+        "FileLocksmith": true,
+        "FindMyMouse": false,
+        "Hosts": false,
+        "ImageResizer": true,
+        "KeyboardManager": true,
+        "MeasureTool": true,
+        "MouseHighlighter": false,
+        "MouseJump": true,
+        "MousePointerCrosshairs": false,
+        "MouseWithoutBorders": false,
+        "Peek": true,
+        "PowerRename": true,
+        "PowerLauncher": true,
+        "PowerOCR": true,
+        "RegistryPreview": true,
+        "ShortcutGuide": true,
+        "VideoConferenceMute": false
+    },
+    "general": {
+        "run_elevated": false,
+        "is_elevated": false,
+        "powertoys_version": "0.85.0",
+        "download_updates_automatically": true,
+        "show_whats_new_after_updates": false,
+        "enable_experimentation": false,
+        "theme": "system",
+        "system_theme": "dark"
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+    "CreationDate": "2026-05-13",
+    "Sources": [
+        {
+            "SourceDetails": {
+                "Argument": "https://cdn.winget.microsoft.com/cache",
+                "Identifier": "Microsoft.Winget.Source_8wekyb3d8bbcwe",
+                "Name": "winget",
+                "Type": "Microsoft.PreIndexed.Package"
+            },
+            "Packages": [
+                { "PackageIdentifier": "Git.Git" },
+                { "PackageIdentifier": "GitHub.cli" },
+                { "PackageIdentifier": "GitHub.GitLFS" },
+                { "PackageIdentifier": "jesseduffield.lazygit" },
+                { "PackageIdentifier": "dandavison.delta" },
+
+                { "PackageIdentifier": "Microsoft.PowerShell" },
+                { "PackageIdentifier": "Microsoft.WindowsTerminal" },
+                { "PackageIdentifier": "Microsoft.PowerToys" },
+                { "PackageIdentifier": "Microsoft.VisualStudioCode" },
+                { "PackageIdentifier": "Anysphere.Cursor" },
+
+                { "PackageIdentifier": "JanDeDobbeleer.OhMyPosh" },
+                { "PackageIdentifier": "jdx.mise" },
+                { "PackageIdentifier": "junegunn.fzf" },
+                { "PackageIdentifier": "BurntSushi.ripgrep.MSVC" },
+                { "PackageIdentifier": "sharkdp.bat" },
+                { "PackageIdentifier": "sharkdp.fd" },
+                { "PackageIdentifier": "eza-community.eza" },
+                { "PackageIdentifier": "ajeetdsouza.zoxide" },
+                { "PackageIdentifier": "ajeetdsouza.zoxide" },
+                { "PackageIdentifier": "stedolan.jq" },
+                { "PackageIdentifier": "MikeFarah.yq" },
+                { "PackageIdentifier": "aristocratos.btop4win" },
+                { "PackageIdentifier": "sharkdp.hyperfine" },
+                { "PackageIdentifier": "bootandy.dust" },
+                { "PackageIdentifier": "Neovim.Neovim" },
+                { "PackageIdentifier": "wez.wezterm" },
+
+                { "PackageIdentifier": "OpenJS.NodeJS.LTS" },
+                { "PackageIdentifier": "Python.Python.3.12" },
+                { "PackageIdentifier": "astral-sh.uv" },
+                { "PackageIdentifier": "GoLang.Go" },
+                { "PackageIdentifier": "Rustlang.Rustup" },
+
+                { "PackageIdentifier": "DEVCOM.JetBrainsMonoNerdFont" },
+
+                { "PackageIdentifier": "twpayne.chezmoi" },
+                { "PackageIdentifier": "AgileBits.1Password.CLI" }
+            ]
+        }
+    ],
+    "WinGetVersion": "1.7.0"
+}

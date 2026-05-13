@@ -1,0 +1,49 @@
+{
+    "version": 1,
+    "hooks": {
+        "afterFileEdit": [
+            {
+                "name": "prettier-on-save",
+                "matcher": { "extensions": ["ts", "tsx", "js", "jsx", "json", "jsonc", "md", "yml", "yaml"] },
+                "command": "npx --yes prettier --write {{file}}",
+                "runIfAvailable": true,
+                "timeoutMs": 15000
+            },
+            {
+                "name": "ruff-on-save",
+                "matcher": { "extensions": ["py"] },
+                "command": "ruff format {{file}} && ruff check --fix {{file}}",
+                "runIfAvailable": true,
+                "timeoutMs": 15000
+            },
+            {
+                "name": "rustfmt-on-save",
+                "matcher": { "extensions": ["rs"] },
+                "command": "rustfmt {{file}}",
+                "runIfAvailable": true,
+                "timeoutMs": 15000
+            },
+            {
+                "name": "gofmt-on-save",
+                "matcher": { "extensions": ["go"] },
+                "command": "gofmt -w {{file}}",
+                "runIfAvailable": true,
+                "timeoutMs": 15000
+            }
+        ],
+        "beforeShellCommand": [
+            {
+                "name": "block-dangerous-rm",
+                "matcher": { "command": "rm -rf /" },
+                "action": "block",
+                "reason": "Refusing recursive root delete."
+            },
+            {
+                "name": "warn-force-push-main",
+                "matcher": { "command": "git push --force" },
+                "action": "confirm",
+                "reason": "Force push detected; confirm target branch."
+            }
+        ]
+    }
+}

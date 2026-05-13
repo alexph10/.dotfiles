@@ -1,0 +1,38 @@
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Neovim temporary files
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Output files
+*.txt
+*.jpg
+*.png
+*.jpeg
+*.gif
+
+# Logs
+*.log
+
+# Backup files
+*.backup
+*.bak

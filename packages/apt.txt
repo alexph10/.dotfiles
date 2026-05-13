@@ -1,0 +1,28 @@
+# Debian/Ubuntu packages installed via apt.
+# Run: sudo apt update && xargs -a apt.txt sudo apt install -y
+
+# Some modern tools are best installed via mise/cargo rather than apt:
+#   - eza, zoxide, bat (newer), fd-find (binary name `fdfind` on apt), gh, lazygit
+# This file installs what apt provides cleanly.
+
+build-essential
+curl
+wget
+ca-certificates
+gnupg
+git
+git-lfs
+unzip
+zip
+ripgrep
+bat
+fd-find
+jq
+fzf
+zsh
+tmux
+htop
+btop
+neovim
+shellcheck
+shfmt

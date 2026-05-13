@@ -1,0 +1,132 @@
+{{- /* Global git configuration. Use `chezmoi cd` to edit. */ -}}
+[user]
+    name  = {{ .name | quote }}
+    email = {{ .email | quote }}
+{{- if .useSigning }}
+    signingkey = {{ env "GIT_SIGNING_KEY" }}
+{{- end }}
+
+[init]
+    defaultBranch = main
+
+[core]
+    editor      = nvim
+    pager       = delta
+    autocrlf    = {{ if eq .chezmoi.os "windows" }}true{{ else }}input{{ end }}
+    excludesFile = ~/.gitignore_global
+    longpaths   = true
+    fsmonitor   = true
+    untrackedCache = true
+
+[pull]
+    rebase = true
+[push]
+    default = current
+    autoSetupRemote = true
+    followTags = true
+[fetch]
+    prune     = true
+    pruneTags = true
+[merge]
+    conflictStyle = zdiff3
+    ff = false
+[rebase]
+    autoStash  = true
+    autoSquash = true
+    updateRefs = true
+[rerere]
+    enabled = true
+    autoupdate = true
+
+[commit]
+    verbose = true
+{{- if .useSigning }}
+    gpgSign = true
+[tag]
+    gpgSign = true
+[gpg]
+    format = ssh
+{{- end }}
+
+[diff]
+    algorithm    = histogram
+    colorMoved   = default
+    mnemonicPrefix = true
+    renames       = copies
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate           = true
+    side-by-side       = true
+    line-numbers       = true
+    syntax-theme       = "Tokyo Night"
+    hyperlinks         = true
+    file-style         = bold yellow
+    minus-style        = syntax "#3a273a"
+    minus-emph-style   = syntax "#6b2c46"
+    plus-style         = syntax "#27332a"
+    plus-emph-style    = syntax "#3e5c45"
+
+[color]
+    ui = auto
+[column]
+    ui = auto
+[branch]
+    sort = -committerdate
+[tag]
+    sort = version:refname
+[log]
+    date = iso
+
+[help]
+    autocorrect = prompt
+
+[alias]
+    s     = status --short --branch
+    st    = status
+    co    = checkout
+    cb    = checkout -b
+    br    = branch
+    a     = add
+    aa    = add --all
+    ap    = add --patch
+    c     = commit -v
+    ca    = commit -v --amend
+    cm    = commit -v -m
+    d     = diff
+    ds    = diff --staged
+    l     = log --oneline --graph --decorate --all -30
+    lg    = log --oneline --graph --decorate --all
+    last  = log -1 --stat
+    unstage = reset HEAD --
+    discard = checkout --
+    nuke    = !git clean -fdx
+    please  = push --force-with-lease
+    sync    = !git pull --rebase --autostash && git push
+    fixup   = "!f() { git commit --fixup=$1; }; f"
+    squash  = "!f() { git rebase -i --autosquash $1; }; f"
+    root    = rev-parse --show-toplevel
+    cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 git branch -d"
+
+[github]
+    user = {{ .name | quote }}
+
+[url "git@github.com:"]
+    insteadOf = gh:
+[url "https://github.com/"]
+    insteadOf = github:
+
+[credential]
+{{- if eq .chezmoi.os "windows" }}
+    helper = manager
+{{- else if eq .chezmoi.os "darwin" }}
+    helper = osxkeychain
+{{- else }}
+    helper = cache --timeout=28800
+{{- end }}
+
+[filter "lfs"]
+    clean    = git-lfs clean -- %f
+    smudge   = git-lfs smudge -- %f
+    process  = git-lfs filter-process
+    required = true
