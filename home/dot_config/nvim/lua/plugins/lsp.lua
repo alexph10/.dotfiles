@@ -81,7 +81,8 @@ return {
         "taplo",
         "clangd",
       },
-      automatic_installation = true,
+      -- servers are set up manually below
+      automatic_enable = false,
     },
   },
 
@@ -184,8 +185,8 @@ return {
 
       -- Global mappings
       vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, { desc = "Open diagnostic float" })
-      vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
-      vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
+      vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1, float = true }) end, { desc = "Go to previous diagnostic" })
+      vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1, float = true }) end, { desc = "Go to next diagnostic" })
       vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, { desc = "Set diagnostic loclist" })
 
       -- Use LspAttach autocommand to only map the following keys
@@ -217,18 +218,6 @@ return {
         end,
       })
 
-      -- Configure diagnostic signs
-      local signs = {
-        Error = "E ",
-        Warn = "W ",
-        Hint = "H ",
-        Info = "I "
-      }
-      for type, icon in pairs(signs) do
-        local hl = "DiagnosticSign" .. type
-        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-      end
-
       -- Configure diagnostics
       vim.diagnostic.config({
         virtual_text = {
@@ -236,7 +225,14 @@ return {
           source = "if_many",
           prefix = "*",
         },
-        signs = true,
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = "E ",
+            [vim.diagnostic.severity.WARN]  = "W ",
+            [vim.diagnostic.severity.HINT]  = "H ",
+            [vim.diagnostic.severity.INFO]  = "I ",
+          },
+        },
         update_in_insert = false,
         underline = true,
         severity_sort = true,
@@ -244,7 +240,7 @@ return {
           focusable = false,
           style = "minimal",
           border = "rounded",
-          source = "always",
+          source = true,
           header = "",
           prefix = "",
         },

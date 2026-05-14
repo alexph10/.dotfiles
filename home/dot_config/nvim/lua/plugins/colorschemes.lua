@@ -301,11 +301,30 @@ return {
   {
     "savq/melange-nvim",
     priority = 1001,
+  },
+
+  -- Lush (dependency for Serendipity)
+  {
+    "rktjmp/lush.nvim",
+    lazy = false,
+    priority = 1003,
+  },
+
+  -- Serendipity (upstream is mis-packaged: theme lives in a nested
+  -- serendipity.nvim/ subdir and the colors/ entry file has a broken
+  -- require path, so we add the subdir to rtp and apply lush directly)
+  {
+    "AustinMay1/Serendipity.nvim",
+    dependencies = { "rktjmp/lush.nvim" },
+    lazy = false,
+    priority = 1002,
     config = function()
-      -- Set background to dark for melange
+      local nested = vim.fn.stdpath("data") .. "/lazy/Serendipity.nvim/serendipity.nvim"
+      vim.opt.rtp:append(nested)
+
       vim.o.background = "dark"
-      -- Apply melange colorscheme
-      vim.cmd([[colorscheme melange]])
+      vim.g.colors_name = "serendipity"
+      require("lush")(require("lush_theme.serendipity_midnight"))
     end,
   },
 

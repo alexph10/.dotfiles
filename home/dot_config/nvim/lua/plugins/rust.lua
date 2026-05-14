@@ -5,9 +5,9 @@ return {
   {
     "mrcjkb/rustaceanvim",
     version = "^5",
-    lazy = false,
     ft = { "rust" },
-    config = function()
+    -- vim.g.rustaceanvim must be set before the ftplugin loads
+    init = function()
       vim.g.rustaceanvim = {
         tools = {
           hover_actions = {

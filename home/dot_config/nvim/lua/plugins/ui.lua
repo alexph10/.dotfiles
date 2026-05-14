@@ -193,7 +193,6 @@ return {
           scroll_up = "<c-u>",
         },
         sort = { "local", "order", "group", "alphanum", "mod" },
-        expand = 0,
         replace = {
           key = {
             function(key)

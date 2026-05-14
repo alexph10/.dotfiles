@@ -299,7 +299,7 @@ return {
           save_on_toggle = false,
           sync_on_ui_close = false,
           key = function()
-            return vim.loop.cwd()
+            return (vim.uv or vim.loop).cwd()
           end,
         }
       })
