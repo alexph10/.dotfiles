@@ -29,4 +29,4 @@ RUST_BACKTRACE          = "1"
 COREPACK_ENABLE_AUTO_PIN = "0"
 
 [hooks]
-postinstall = "corepack enable >/dev/null 2>&1 || true"
+postinstall = "corepack enable"

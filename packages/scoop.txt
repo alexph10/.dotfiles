@@ -1,6 +1,4 @@
 # Buckets: main, extras, nerd-fonts
-# scoop bucket add extras
-# scoop bucket add nerd-fonts
 
 main/git
 main/gh
@@ -16,8 +14,6 @@ main/jq
 main/yq
 main/hyperfine
 main/dust
-main/btop
-main/oh-my-posh
 main/mise
 main/neovim
 main/uv
@@ -26,11 +22,12 @@ main/direnv
 main/just
 main/tealdeer
 main/gitleaks
-main/atuin
-main/glow
-main/pre-commit
-main/azure-cli
+main/win32yank
 
+extras/btop
+extras/oh-my-posh
+extras/glow
+extras/azure-cli
 extras/wezterm
 extras/vscode
 extras/powertoys
