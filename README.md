@@ -1,6 +1,6 @@
-<img width="2558" height="1438" alt="Pasted image 20260513220529" src="https://github.com/user-attachments/assets/17c323bf-03ea-48d6-9228-2852f5e6efa8" />
+#### Dotfiles
 
-# Dotfiles
+<img width="2558" height="1438" alt="Pasted image 20260513220529" src="https://github.com/user-attachments/assets/17c323bf-03ea-48d6-9228-2852f5e6efa8" />
 
 Personal dotfiles, Windows first. Each top-level directory mirrors the path
 relative to `$HOME` where its files install. For example
@@ -8,7 +8,7 @@ relative to `$HOME` where its files install. For example
 `powershell/Documents/PowerShell/Microsoft.PowerShell_profile.ps1` lands at
 `~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1`.
 
-## Install (Windows)
+#### Install (Windows)
 
 Requirements: PowerShell 7+ (`pwsh`), `winget`, and either Administrator
 rights or Windows Developer Mode (for symlinks; copy mode is the fallback).
@@ -37,7 +37,7 @@ pwsh -File .\scripts\verify.ps1
 on Windows. Pass `-Exclude @()` to include them or `-Only` to target a
 specific tool.
 
-## Install (macOS / Linux / WSL)
+#### Install (macOS / Linux / WSL)
 
 ```sh
 git clone https://github.com/alexph10/.dotfiles ~/.dotfiles
@@ -48,7 +48,7 @@ cd ~/.dotfiles
 Use [`stow`](https://www.gnu.org/software/stow/) or `chezmoi` to materialize
 the per-tool directories into `$HOME` (the layout is compatible with both).
 
-## Layout
+#### Layout
 
 | Directory               | Target                                                  |
 | ----------------------- | ------------------------------------------------------- |
@@ -64,7 +64,7 @@ the per-tool directories into `$HOME` (the layout is compatible with both).
 | `scripts/`              | install, link, verify, tweaks                           |
 | `templates/`            | starter `justfile`, `pre-commit-config.yaml`            |
 
-## Update
+#### Update
 
 ```powershell
 cd $HOME\.dotfiles
