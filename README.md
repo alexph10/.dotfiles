@@ -2,7 +2,7 @@
 
 <img width="2558" height="1438" alt="Pasted image 20260513220529" src="https://github.com/user-attachments/assets/17c323bf-03ea-48d6-9228-2852f5e6efa8" />
 
-Personal dotfiles, Windows first. Each top-level directory mirrors the path
+Personal dotfiles. Each top-level directory mirrors the path
 relative to `$HOME` where its files install. For example
 `git/.gitconfig` lands at `~/.gitconfig`, and
 `powershell/Documents/PowerShell/Microsoft.PowerShell_profile.ps1` lands at
