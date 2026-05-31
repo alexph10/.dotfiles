@@ -42,7 +42,7 @@ return {
     end,
     lazy = false,
     opts = {
-      prompt = '🪿 ',
+      prompt = '> ',
       title = 'FFFiles',
       lazy_sync = true,
       debug = {

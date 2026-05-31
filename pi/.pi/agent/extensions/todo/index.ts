@@ -60,7 +60,7 @@ class TodoListComponent {
 		const th = this.theme;
 
 		lines.push("");
-		const title = th.fg("accent", " ✦ Todos ");
+		const title = th.fg("accent", " Todos ");
 		const headerLine =
 			th.fg("borderMuted", "─".repeat(3)) + title + th.fg("borderMuted", "─".repeat(Math.max(0, width - 12)));
 		lines.push(truncateToWidth(headerLine, width));
@@ -312,7 +312,7 @@ export default function (pi: ExtensionAPI) {
 			const highPri = incomplete.filter((t) => t.priority === "high");
 			const parts: string[] = [`${incomplete.length} incomplete todo(s)`];
 			if (highPri.length > 0) parts.push(`${highPri.length} high priority`);
-			ctx.ui.notify(`⚠ ${parts.join(", ")}`, "warning");
+			ctx.ui.notify(`[warn] ${parts.join(", ")}`, "warning");
 		}
 	});
 

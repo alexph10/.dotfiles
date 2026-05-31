@@ -1,5 +1,6 @@
-echo "🔍 Running TruffleHog to scan for secrets..."
+#!/usr/bin/env sh
+echo "Running TruffleHog to scan for secrets..."
 trufflehog git file://./ --since-commit HEAD --only-verified --fail --exclude-paths node_modules/
 
-echo "🧪 Running tests..."
+echo "Running tests..."
 bun test || true

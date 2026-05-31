@@ -14,7 +14,6 @@ selection-foreground =
 
 cursor-color = c9c9c9
 
-# ----------
 # Normal
 
 # Black
@@ -34,7 +33,6 @@ palette = 6=#858ca6
 # White
 palette = 7=#c9c9c9
 
-# ----------
 # Bright
 
 # Black
