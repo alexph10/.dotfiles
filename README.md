@@ -2,12 +2,6 @@
 
 <img width="2558" height="1438" alt="Pasted image 20260513220529" src="https://github.com/user-attachments/assets/17c323bf-03ea-48d6-9228-2852f5e6efa8" />
 
-Personal dotfiles. Each top-level directory mirrors the path
-relative to `$HOME` where its files install. For example
-`git/.gitconfig` lands at `~/.gitconfig`, and
-`powershell/Documents/PowerShell/Microsoft.PowerShell_profile.ps1` lands at
-`~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1`.
-
 #### Install (Windows)
 
 Requirements: PowerShell 7+ (`pwsh`), `winget`, and either Administrator
@@ -36,14 +30,6 @@ pwsh -File .\scripts\verify.ps1
 `bash/`, `zsh/`, `ghostty/`, `equibop/`, and `flow/` are skipped by default
 on Windows. Pass `-Exclude @()` to include them or `-Only` to target a
 specific tool.
-
-#### Install (macOS / Linux / WSL)
-
-```sh
-git clone https://github.com/alexph10/.dotfiles ~/.dotfiles
-cd ~/.dotfiles
-./scripts/install-packages.sh
-```
 
 Use [`stow`](https://www.gnu.org/software/stow/) or `chezmoi` to materialize
 the per-tool directories into `$HOME` (the layout is compatible with both).
