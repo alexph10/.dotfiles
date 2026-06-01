@@ -1,5 +1,7 @@
 #### Dotfiles
 
+<img width="2559" height="1439" alt="Pasted image 20260601034942" src="https://github.com/user-attachments/assets/f92385a4-6751-466a-9657-25a37d41c1a4" />
+
 #### Install (Windows)
 
 Requirements: PowerShell 7+ (`pwsh`), `winget`, and either Administrator
