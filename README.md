@@ -1,6 +1,6 @@
 #### Dotfiles
 
-<img width="2559" height="1439" alt="Pasted image 20260601034942" src="https://github.com/user-attachments/assets/f92385a4-6751-466a-9657-25a37d41c1a4" />
+<img width="2559" height="1278" alt="Pasted image 20260601034942" src="https://github.com/user-attachments/assets/6deec8d5-767d-4489-84a0-2c17df5a7630" />
 
 #### Install (Windows)
 
