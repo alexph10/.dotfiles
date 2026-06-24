@@ -1,6 +1,6 @@
 [user]
-    name  = "Alex Y"
-    email = "alex@example.com"
+    name  = "Your Name"
+    email = "you@example.com"
 
 [init]
     defaultBranch = main
@@ -98,7 +98,7 @@
     cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 git branch -d"
 
 [github]
-    user = "Alex Y"
+    user = "your-username"
 
 [url "git@github.com:"]
     insteadOf = gh:

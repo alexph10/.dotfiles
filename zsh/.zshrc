@@ -1,5 +1,5 @@
-export DOTFILES_NAME="Alex Y"
-export DOTFILES_EMAIL="alex@example.com"
+export DOTFILES_NAME="Your Name"
+export DOTFILES_EMAIL="you@example.com"
 
 export EDITOR="${EDITOR:-nvim}"
 export VISUAL="$EDITOR"

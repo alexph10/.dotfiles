@@ -1,4 +1,4 @@
-In every reply, begin exactly with: "Yes, Nicholas"
+In every reply, begin exactly with: "Yes"
 
 Process for every task:
 1) <thinking>

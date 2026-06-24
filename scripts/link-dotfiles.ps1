@@ -18,9 +18,9 @@ $Root   = (Resolve-Path -LiteralPath $Root).Path
 $Target = (Resolve-Path -LiteralPath $Target).Path
 
 $skipTop = @(
-    '.git', '.husky', 'assets', 'node_modules', 'packages', 'scripts',
+    '.git', '.husky', 'node_modules', 'packages', 'scripts',
     'templates', 'README.md', '.gitignore', '.gitattributes',
-    'bun.lock', 'index.ts', 'package.json', 'tsconfig.json'
+    'bun.lock', 'package.json', 'tsconfig.json'
 ) + $Exclude
 
 function Test-Admin {

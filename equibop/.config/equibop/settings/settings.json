@@ -941,8 +941,8 @@
             "cacheLimit": 150,
             "whitelistedIds": "",
             "blacklistedIds": "",
-            "imageCacheDir": "/Users/nicojaffer/Library/Application Support/equibop/MessageLoggerData/savedImages",
-            "logsDir": "/Users/nicojaffer/Library/Application Support/equibop/MessageLoggerData"
+            "imageCacheDir": "",
+            "logsDir": ""
         },
         "MessageTranslate": {
             "enabled": false
